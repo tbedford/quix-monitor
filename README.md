@@ -1,6 +1,6 @@
 # quix-monitor
 
-A really simple little utility that can monitor your Quix deplyments from the command line (or in Emacs).
+A really simple little utility that can monitor your Quix deployments from the command line (or in Emacs). This is only meant as a quick example of using the Portal API, but is surprisingly useful.
 
 Run:
 
@@ -25,6 +25,19 @@ or `less`:
 ``` shell
 less +F dump
 ```
+
+## Use in Emacs
+
+Quite simple to use in Emacs so you can monitor your deplyments while getting some work done.
+
+In emacs launch an ANSI term with `M-x ansi-term RET bash` (or Zsh if you want).
+
+Then in the ANSI terminal just type:
+
+1. `python3 qm.py > dump &` - this runs the monitor as a background process.
+2. `less +F dump` - this displays the tail of the dump file so you can see your status.
+
+## Quix Portal API
 
 This uses the [Quix Portal API](https://quix.io/docs/apis/portal-api.html).
 
