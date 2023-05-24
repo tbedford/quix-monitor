@@ -37,6 +37,11 @@ Then in the ANSI terminal just type:
 1. `python3 qm.py > dump &` - this runs the monitor as a background process.
 2. `less +F dump` - this displays the tail of the dump file so you can see your status.
 
+It looks something like this:
+
+![Quix Monitor in Emacs](./images/quix-monitor-emacs.png)
+
+
 ## Quix Portal API
 
 This uses the [Quix Portal API](https://quix.io/docs/apis/portal-api.html).
