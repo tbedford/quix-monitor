@@ -28,7 +28,7 @@ less +F dump
 
 ## Use in Emacs
 
-Quite simple to use in Emacs so you can monitor your deplyments while getting some work done.
+Quite simple to use in Emacs so you can monitor your deployments while getting some work done.
 
 In emacs launch an ANSI term with `M-x ansi-term RET bash` (or Zsh if you want).
 
