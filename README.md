@@ -64,7 +64,21 @@ TOKEN=your-token
 
 That's it!
 
+## Quix Sentinel
+
+With Quix Sentinel (not an official product - I just made that up),
+you can get an SMS alert if your important deployment goes down for
+some reason.
+
+This example does a request using the Portal API on a specific
+deployment, checks the status, and if not running, send an SMS to the
+configured admin using the Vonage SMS API.
+
+See the example `md-sms.py`. There's also another example `md.py` that
+monitors the specified deployment but doesn't send a text.
+
 ## Free Quix account
 
-You can get a free Quix account by going [here](https://quix.io) and then clicking "Sign Up".
+You can get a free Quix account by going [here](https://quix.io) and
+then clicking "Sign Up".
 
