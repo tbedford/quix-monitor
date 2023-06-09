@@ -11,7 +11,7 @@ import sys
 
 load_dotenv()
 token = os.getenv("TOKEN")
-
+workspace_id = os.getenv("WORKSPACE")
 
 def send_request():
     # Request
@@ -21,17 +21,15 @@ def send_request():
         response = requests.get(
             url="https://portal-api.platform.quix.ai/deployments",
             params={
-                "workspaceId": "tonybedford-workspace1",
+                "workspaceId": workspace_id,
             },
             headers={
-                "Authorization": "Bearer "+token
+                "Authorization": "Bearer " + token
             }
         )
 
         deployments = json.loads(response.content)
-
         for d in deployments:
-
             print('{name}  --  {status}'.format(name=d["name"], status = d["status"]))
             
         # print(json.dumps(json.loads(response.content)))
@@ -45,3 +43,4 @@ while True:
     print('----------------------------------------------')
     sys.stdout.flush() # to use with `tail -f` or `less +F`
     time.sleep(3)
+    
